@@ -22,21 +22,21 @@ public class StudentMember extends Member {
         this.verified    = false;
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public String  getStudentId()   { return studentId; }
     public String  getInstitution() { return institution; }
     public boolean isVerified()     { return verified; }
 
-    // ── Setters ────────────────────────────────────────────────────────────
+    // Setters
     public void setStudentId(String studentId)     { this.studentId   = studentId; }
     public void setInstitution(String institution) { this.institution = institution; }
 
-    // ── Abstract implementations ───────────────────────────────────────────
+    // Abstract implementations
     @Override public double getMonthlyFee()      { return MONTHLY_FEE; }
     @Override public int    getMonthsRemaining() { return DURATION_MONTHS; }
     @Override public String getMembershipType()  { return "Student"; }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public boolean verifyStudent() {
         verified = studentId != null && !studentId.isBlank();
         System.out.printf("  Student verification [%s]: %s%n",

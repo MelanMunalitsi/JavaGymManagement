@@ -15,15 +15,15 @@ public class PartTimeStaff extends Staff {
         this.hoursWorked  = hoursWorked;
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public double getHourlyRate()  { return hourlyRate; }
     public int    getHoursWorked() { return hoursWorked; }
 
-    // ── Setters ────────────────────────────────────────────────────────────
+    // Setters
     public void setHourlyRate(double hourlyRate)  { this.hourlyRate  = hourlyRate; }
     public void setHoursWorked(int hoursWorked)   { this.hoursWorked = hoursWorked; }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public double calculatePay() {
         double pay = hourlyRate * hoursWorked;
         System.out.printf("  %s | £%.2f/hr × %d hrs = £%.2f%n",

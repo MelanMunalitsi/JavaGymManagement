@@ -25,17 +25,17 @@ public class StandardMember extends Member {
         this.guestPassesThisMonth = 0;
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public int     getLoyaltyPoints()        { return loyaltyPoints; }
     public boolean isFrozen()                { return frozen; }
     public int     getGuestPassesThisMonth() { return guestPassesThisMonth; }
 
-    // ── Abstract implementations ───────────────────────────────────────────
+    // Abstract implementations
     @Override public double getMonthlyFee()      { return MONTHLY_FEE; }
     @Override public int    getMonthsRemaining() { return DURATION_MONTHS; }
     @Override public String getMembershipType()  { return "Standard"; }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public void earnPoints(int points) {
         if (points > 0) {
             loyaltyPoints += points;

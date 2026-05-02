@@ -31,9 +31,9 @@ public class Main {
         banner("End of Demonstration");
     }
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  TASK 2 — Base class instantiation & getters/setters
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     private static void task2_BaseClasses() {
         section("TASK 2 — Base Classes");
 
@@ -71,13 +71,13 @@ public class Main {
         System.out.println("  After refund   : " + pay.getStatus());
     }
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  TASK 3a — Full inheritance hierarchy
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     private static void task3a_InheritanceHierarchy() {
         section("TASK 3a — Inheritance Hierarchy");
 
-        // ── Member subtypes ──────────────────────────────────────────────
+        // Member subtypes
         System.out.println("▶ StudentMember");
         StudentMember student = new StudentMember(10, "Zara Ahmed",
                 "zara@uni.ac.uk", "zara99", 2001,
@@ -104,7 +104,7 @@ public class Main {
         payg.useCredit();
         payg.viewMembershipDetails();
 
-        // ── Staff subtypes ───────────────────────────────────────────────
+        // Staff subtypes
         System.out.println("\n▶ FullTimeStaff");
         FullTimeStaff ft = new FullTimeStaff(20, "Linda Torres",
                 "linda@gym.com", "linda1", 301, "Manager",
@@ -127,13 +127,13 @@ public class Main {
         System.out.println("  " + instructor);
     }
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  TASK 3b — ArrayList-based operations with dummy data
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     private static void task3b_GymOperations() {
         section("TASK 3b — Gym Operations (ArrayLists)");
 
-        // ── Seed: Instructors ────────────────────────────────────────────
+        // Seed: Instructors
         System.out.println("▶ Adding Instructors");
         Instructor i1 = new Instructor(30, "Priya Sharma",   "priya@gym.com",  "p1", 401, "Fat Burn & Cardio");
         Instructor i2 = new Instructor(31, "Carlos Diaz",    "carlos@gym.com", "p2", 402, "Fitness & Endurance");
@@ -142,7 +142,7 @@ public class Main {
         gym.addInstructor(i2);
         gym.addInstructor(i3);
 
-        // ── Seed: Full-time staff ────────────────────────────────────────
+        // Seed: Full-time staff
         System.out.println("\n▶ Adding Full-Time Staff");
         gym.addStaff(new FullTimeStaff(33, "Linda Torres",   "linda@gym.com",   "l1", 501, "Manager",      2800.00, "Health Insurance"));
         gym.addStaff(new FullTimeStaff(34, "Owen Richards",  "owen@gym.com",    "l2", 502, "Supervisor",   2400.00, "Pension, 25 days"));
@@ -150,14 +150,14 @@ public class Main {
         gym.addStaff(new FullTimeStaff(36, "Tom Adekunle",   "tom@gym.com",     "l4", 504, "Security",     2200.00, "Pension"));
         gym.addStaff(new FullTimeStaff(37, "Nina Patel",     "nina@gym.com",    "l5", 505, "Trainer",      2300.00, "Health Insurance"));
 
-        // ── Seed: Part-time staff ────────────────────────────────────────
+        // Seed: Part-time staff
         System.out.println("\n▶ Adding Part-Time Staff");
         gym.addStaff(new PartTimeStaff(38, "James Mwangi",  "james@gym.com",  "pt1", 601, "Cleaner",    12.50, 20));
         gym.addStaff(new PartTimeStaff(39, "Sara Bloom",    "sara@gym.com",   "pt2", 602, "Receptionist", 13.00, 16));
         gym.addStaff(new PartTimeStaff(40, "Felix Ono",     "felix@gym.com",  "pt3", 603, "Lifeguard",  13.50, 24));
         gym.addStaff(new PartTimeStaff(41, "Yemi Adeyemi",  "yemi@gym.com",   "pt4", 604, "Trainer",    14.00, 12));
 
-        // ── Seed: Bootcamp classes ───────────────────────────────────────
+        // Seed: Bootcamp classes
         System.out.println("\n▶ Setting Up Bootcamp Classes");
         BootCampClass fatBurn     = new BootCampClass(701, "Fat Burn",            i1, 15);
         BootCampClass fitnessEnd  = new BootCampClass(702, "Fitness & Endurance", i2, 15);
@@ -170,7 +170,7 @@ public class Main {
         i2.assignClass(fitnessEnd);
         i3.assignClass(fullBody);
 
-        // ── Seed: Members ────────────────────────────────────────────────
+        // Seed: Members
         System.out.println("\n▶ Registering Members");
         StudentMember    m1 = new StudentMember(50,    "Zara Ahmed",     "zara@uni.ac.uk",   "z1", 1001, "STU-001", "City University");
         StandardMember   m2 = new StandardMember(51,   "David Osei",     "david@email.com",  "d1", 1002);
@@ -184,15 +184,15 @@ public class Main {
 
         m4.topUp(10);
 
-        // ── Display all members ──────────────────────────────────────────
+        // Display all members
         System.out.println("\n▶ All Registered Members");
         gym.listAllMembers();
 
-        // ── Display all staff ────────────────────────────────────────────
+        // Display all staff
         System.out.println("\n▶ All Staff");
         gym.listAllStaff();
 
-        // ── Enrol members in classes ─────────────────────────────────────
+        // Enrol members in classes
         System.out.println("\n▶ Enrolling Members in Bootcamp Classes");
         gym.enrolMemberInClass(1001, 701);  // Zara → Fat Burn
         gym.enrolMemberInClass(1001, 702);  // Zara → Fitness & Endurance (triggers 7% discount)
@@ -203,32 +203,32 @@ public class Main {
         gym.enrolMemberInClass(1006, 702);  // Ethan → Fitness & Endurance
         gym.enrolMemberInClass(9999, 701);  // ✗ Non-existent member
 
-        // ── Class rosters ────────────────────────────────────────────────
+        // Class rosters
         System.out.println("\n▶ Bootcamp Class Rosters");
         gym.printClassRosters();
 
-        // ── Remove a member from class ───────────────────────────────────
+        // Remove a member from class
         System.out.println("▶ Removing David from Fat Burn");
         gym.removeFromClass(1002, 701);
 
-        // ── Membership details ───────────────────────────────────────────
+        // Membership details
         System.out.println("\n▶ Membership Details");
         gym.findMember(1001).ifPresent(Member::viewMembershipDetails);
         gym.findMember(1002).ifPresent(Member::viewMembershipDetails);
         gym.findMember(1004).ifPresent(Member::viewMembershipDetails);
 
-        // ── Bookings ─────────────────────────────────────────────────────
+        // Bookings
         System.out.println("▶ All Bookings");
         gym.listAllBookings();
 
-        // ── Payments ─────────────────────────────────────────────────────
+        // Payments
         System.out.println("\n▶ All Payments");
         gym.listAllPayments();
     }
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  TASK 3c — Abstract BootcampFee with discount logic
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     private static void task3c_BootcampFeeCalculation() {
         section("TASK 3c — Bootcamp Fee Calculation (Abstract Class)");
 
@@ -253,9 +253,9 @@ public class Main {
                 (GymManager.BASE_FEE_PER_CLASS * 3) - gym.calculateFee(3));
     }
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  Formatting helpers
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     private static void banner(String title) {
         String line = "═".repeat(60);
         System.out.println("\n" + line);

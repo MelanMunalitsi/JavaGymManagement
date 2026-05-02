@@ -15,15 +15,15 @@ public class FullTimeStaff extends Staff {
         this.benefits      = benefits;
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public double getMonthlySalary() { return monthlySalary; }
     public String getBenefits()      { return benefits; }
 
-    // ── Setters ────────────────────────────────────────────────────────────
+    // Setters
     public void setMonthlySalary(double monthlySalary) { this.monthlySalary = monthlySalary; }
     public void setBenefits(String benefits)           { this.benefits      = benefits; }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public double calculateSalary() {
         System.out.printf("  %s | Monthly Salary: £%.2f%n", getName(), monthlySalary);
         return monthlySalary;

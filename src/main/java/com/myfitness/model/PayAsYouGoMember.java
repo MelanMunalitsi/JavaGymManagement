@@ -16,16 +16,16 @@ public class PayAsYouGoMember extends Member {
         this.credits = 0;
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public int    getCredits()       { return credits; }
     public double getCostPerVisit()  { return COST_PER_VISIT; }
 
-    // ── Abstract implementations ───────────────────────────────────────────
+    // Abstract implementations
     @Override public double getMonthlyFee()      { return COST_PER_VISIT; }
     @Override public int    getMonthsRemaining() { return DURATION_MONTHS; }
     @Override public String getMembershipType()  { return "Pay-As-You-Go"; }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public void topUp(int visits) {
         if (visits > 0) {
             credits += visits;

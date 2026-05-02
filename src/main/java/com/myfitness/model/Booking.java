@@ -23,14 +23,14 @@ public class Booking {
         this.status        = Status.PENDING;
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public int           getBookingId()     { return bookingId; }
     public Member        getMember()        { return member; }
     public BootCampClass getBootcampClass() { return bootcampClass; }
     public LocalDate     getBookingDate()   { return bookingDate; }
     public Status        getStatus()        { return status; }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public void confirm() {
         status = Status.CONFIRMED;
         System.out.printf("  ✓ Booking #%d confirmed: %s → %s%n",

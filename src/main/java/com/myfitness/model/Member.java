@@ -22,23 +22,23 @@ public abstract class Member extends Person {
         this.balance      = 0.0;
     }
 
-    // ── Abstract ───────────────────────────────────────────────────────────
+    // Abstract
     public abstract double getMonthlyFee();
     public abstract int    getMonthsRemaining();
     public abstract String getMembershipType();
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public int       getMembershipId()   { return membershipId; }
     public LocalDate getDateJoined()     { return dateJoined; }
     public String    getStatus()         { return status; }
     public double    getBalance()        { return balance; }
     public int       getDaysRemaining()  { return getMonthsRemaining() * 30; }
 
-    // ── Setters ────────────────────────────────────────────────────────────
+    // Setters
     public void setStatus(String status)   { this.status  = status; }
     public void setBalance(double balance) { this.balance = balance; }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public void makePayment(double amount) {
         balance -= amount;
         System.out.printf("  Payment of £%.2f made by %s. Balance: £%.2f%n",

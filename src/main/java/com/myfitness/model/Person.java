@@ -18,17 +18,17 @@ public abstract class Person {
         this.password = password;
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public int    getId()    { return id; }
     public String getName()  { return name; }
     public String getEmail() { return email; }
 
-    // ── Setters ────────────────────────────────────────────────────────────
+    // Setters
     public void setName(String name)        { this.name     = name; }
     public void setEmail(String email)      { this.email    = email; }
     public void setPassword(String password){ this.password = password; }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public boolean login(String email, String password) {
         return this.email.equals(email) && this.password.equals(password);
     }

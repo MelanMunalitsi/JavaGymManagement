@@ -26,7 +26,7 @@ public class BootCampClass {
         this.enrolledMembers = new ArrayList<>();
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public int        getClassId()         { return classId; }
     public String     getClassName()       { return className; }
     public Instructor getInstructor()      { return instructor; }
@@ -35,11 +35,11 @@ public class BootCampClass {
     public int        getDurationDays()    { return DURATION_DAYS; }
     public List<Member> getEnrolledMembers() { return enrolledMembers; }
 
-    // ── Setters ────────────────────────────────────────────────────────────
+    // Setters
     public void setInstructor(Instructor instructor) { this.instructor = instructor; }
     public void setCapacity(int capacity)            { this.capacity   = capacity; }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public boolean isAvailable() {
         return enrolledMembers.size() < capacity;
     }

@@ -21,15 +21,15 @@ public class Staff extends Person {
         this.schedule = new ArrayList<>();
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public int          getStaffId()  { return staffId; }
     public String       getRole()     { return role; }
     public List<String> getSchedule() { return schedule; }
 
-    // ── Setters ────────────────────────────────────────────────────────────
+    // Setters
     public void setRole(String role) { this.role = role; }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public void addShift(String shift) {
         schedule.add(shift);
         System.out.printf("  Shift added for %s: %s%n", getName(), shift);

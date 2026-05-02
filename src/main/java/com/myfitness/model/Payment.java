@@ -29,7 +29,7 @@ public class Payment {
         this.description = description;
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public int       getPaymentId()   { return paymentId; }
     public Member    getMember()      { return member; }
     public double    getAmount()      { return amount; }
@@ -38,7 +38,7 @@ public class Payment {
     public Status    getStatus()      { return status; }
     public String    getDescription() { return description; }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public boolean process() {
         if (amount <= 0) {
             status = Status.FAILED;

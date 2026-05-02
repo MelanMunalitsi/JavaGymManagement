@@ -17,7 +17,7 @@ import java.util.Optional;
  */
 public class GymManager extends BootcampFee implements Payable {
 
-    // ── In-memory "database" ───────────────────────────────────────────────
+    // In-memory "database"
     private final List<Member>       members     = new ArrayList<>();
     private final List<Staff>        staff       = new ArrayList<>();
     private final List<Instructor>   instructors = new ArrayList<>();
@@ -27,15 +27,14 @@ public class GymManager extends BootcampFee implements Payable {
 
     private double totalPaid = 0.0;
 
-    // ── ID counters ────────────────────────────────────────────────────────
+    // ID counters
     private int nextMemberId  = 1;
     private int nextBookingId = 1001;
     private int nextPaymentId = 5001;
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  BootcampFee — Task 3c concrete implementation
-    // ══════════════════════════════════════════════════════════════════════
-
+    // 
     /**
      * Calculates total bootcamp fee.
      * Applies a 7% discount when enrolling in 2 or more classes.
@@ -50,10 +49,9 @@ public class GymManager extends BootcampFee implements Payable {
         return subtotal;
     }
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  Payable interface implementation
-    // ══════════════════════════════════════════════════════════════════════
-
+    // 
     @Override
     public boolean processPayment(double amount) {
         totalPaid += amount;
@@ -70,10 +68,9 @@ public class GymManager extends BootcampFee implements Payable {
     @Override
     public double getTotalPaid() { return totalPaid; }
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  MEMBER MANAGEMENT
-    // ══════════════════════════════════════════════════════════════════════
-
+    // 
     public void addMember(Member member) {
         members.add(member);
         System.out.printf("  ✓ Member added: %s (%s)%n",
@@ -102,10 +99,9 @@ public class GymManager extends BootcampFee implements Payable {
         members.forEach(m -> System.out.println("  " + m));
     }
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  STAFF MANAGEMENT
-    // ══════════════════════════════════════════════════════════════════════
-
+    // 
     public void addStaff(Staff s) {
         staff.add(s);
         System.out.printf("  ✓ Staff added: %s (%s)%n", s.getName(), s.getRole());
@@ -128,10 +124,9 @@ public class GymManager extends BootcampFee implements Payable {
         instructors.forEach(i -> System.out.println("  " + i));
     }
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  BOOTCAMP CLASS MANAGEMENT
-    // ══════════════════════════════════════════════════════════════════════
-
+    // 
     public void addClass(BootCampClass bc) {
         classes.add(bc);
         System.out.printf("  ✓ Class added: %s%n", bc.getClassName());
@@ -195,10 +190,9 @@ public class GymManager extends BootcampFee implements Payable {
         classes.forEach(c -> { c.printRoster(); System.out.println(); });
     }
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  BOOKINGS & PAYMENTS
-    // ══════════════════════════════════════════════════════════════════════
-
+    // 
     public void listAllBookings() {
         if (bookings.isEmpty()) { System.out.println("  No bookings."); return; }
         bookings.forEach(b -> System.out.println("  " + b));
@@ -217,10 +211,9 @@ public class GymManager extends BootcampFee implements Payable {
                 .findFirst();
     }
 
-    // ══════════════════════════════════════════════════════════════════════
+    // 
     //  SUMMARY
-    // ══════════════════════════════════════════════════════════════════════
-
+    // 
     public void printSystemSummary() {
         System.out.println("  ┌─── MyFitness System Summary ─────────────");
         System.out.printf ("  │ Members     : %d%n", members.size());

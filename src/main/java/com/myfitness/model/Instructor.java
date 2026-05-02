@@ -18,16 +18,16 @@ public class Instructor extends Staff {
         this.assignedClasses = new ArrayList<>();
     }
 
-    // ── Getters ────────────────────────────────────────────────────────────
+    // Getters
     public String              getSpecialization()  { return specialization; }
     public List<BootCampClass> getAssignedClasses() { return assignedClasses; }
 
-    // ── Setters ────────────────────────────────────────────────────────────
+    // Setters
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
     }
 
-    // ── Methods ────────────────────────────────────────────────────────────
+    // Methods
     public void assignClass(BootCampClass bc) {
         assignedClasses.add(bc);
         System.out.printf("  %s assigned to: %s%n", getName(), bc.getClassName());
