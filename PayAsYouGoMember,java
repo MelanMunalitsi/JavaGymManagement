@@ -1,0 +1,47 @@
+/*public class PayAsYouGoMember extends Member{
+    private int credits;
+    //constants
+        private static final double PRICE_PER_VISIT = 4.95;
+    private static final int    VALIDITY_DAYS    = 30;
+    private static final int    VALIDITY_MONTHS  = 1;
+
+    //Constructor
+public PayAsYouGoMember(int id, String name, String email, String password,
+int membershipId, String dateJoined,int initialCredits) {
+        super(id, name, email, password, membershipId, dateJoined);
+        this.credits = initialCredits;
+    }
+    public int    getCredits()       { return credits; }
+    public double getPricePerVisit() { return PRICE_PER_VISIT; }
+    public int    getValidityDays()  { return VALIDITY_DAYS; }
+
+public void setCredits(int credits) { this.credits = credits; }
+// Methods
+    public void buyCredits(double amount) {
+        int purchased = (int)(amount / PRICE_PER_VISIT);
+        credits += purchased;
+        System.out.printf("  %s purchased %d credit(s) for GBP %.2f"+ " | Total credits: %d%n",
+        getName(), purchased,
+        purchased * PRICE_PER_VISIT, credits);
+    }
+
+    public boolean useCredit() {
+        if (credits > 0) {
+            credits--;
+            System.out.println("  Credit used by " + getName()+ " | Remaining: " + credits);
+            return true;
+        }
+        System.out.println("  No credits remaining for "+ getName() + ". Please top up.");
+        return false;
+    }
+    @Override public String getMembershipType()  { return "Pay-As-You-Go (GBP 4.95/visit, 30-day window)"; }
+    @Override public int    getDaysRemaining()   { return VALIDITY_DAYS; }
+    @Override public int    getMonthsRemaining() { return VALIDITY_MONTHS; }
+    @Override
+    public String toString() {
+        return "[PAYASYOUGO]  " + super.toString()
+        + " | Credits: " + credits;
+    }
+}
+
+*/
